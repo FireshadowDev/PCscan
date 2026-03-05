@@ -1,0 +1,13 @@
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[探]Logs/
+/[Mm]emoryCaptures/
+/UserSettings/
+
+# Archivos de solución de Visual Studio
+*.csproj
+*.sln
+*.userprefs
