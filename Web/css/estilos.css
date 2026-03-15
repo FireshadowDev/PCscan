@@ -568,12 +568,302 @@ footer {
     border: 0 solid #ffffff;
 }
 
-/* --- ESTILOS PCSCAN LANDING --- */
-.hero { display: flex; align-items: center; gap: 40px; padding: 60px 20px; }
-.hero-btns { margin-top: 20px; }
-.btn-buy, .btn-add-cart { background: var(--color-accent); color: #000; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; transition: 0.3s; border: none; }
-.btn-buy:hover { box-shadow: 0 0 20px var(--color-accent); }
-.btn-ar { color: var(--color-accent); border: 2px solid var(--color-accent); padding: 13px 28px; border-radius: 50px; text-decoration: none; margin-left: 10px; transition: 0.3s; }
-.btn-ar:hover { background: var(--color-accent); color: #000; }
-.pricing-card { text-align: center; border: 1px solid var(--color-accent); padding: 40px; border-radius: 15px; margin: 40px 0; }
-.price-big { font-size: 3rem; color: var(--color-accent); font-weight: bold; }
+/* ============================================================
+   ESTILOS MAESTROS PCSCAN: LAYOUT, MODALES Y CARRITO
+   ============================================================ */
+
+/* 1. CONFIGURACIÓN DEL CUERPO: Footer al fondo y sin banner */
+.body-pcscan {
+    padding-top: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+}
+
+/* 2. HEADER Y NAVEGACIÓN: Limpieza y Logo Neón */
+.body-pcscan header {
+    background: none !important;
+    height: 75px !important;
+    margin: 0 !important;
+}
+
+.body-pcscan header h1 {
+    display: none !important; /* Elimina el texto PCscanAR antiguo */
+}
+
+.body-pcscan .nav-global {
+    background-color: #0a0a0a !important;
+    border-bottom: 2px solid var(--color-accent) !important;
+    position: fixed !important;
+    top: 0 !important;
+    z-index: 1000;
+}
+
+.logo-pcscan {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--color-accent);
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    position: fixed;
+    top: 20px;
+    left: 40px;
+    z-index: 1001;
+    text-shadow: 0 0 10px rgba(0, 188, 212, 0.6);
+}
+
+.logo-pcscan span {
+    color: #fff;
+    font-weight: bold;
+}
+
+/* 3. LAYOUT PRINCIPAL: 3 Columnas equilibradas */
+.body-pcscan main {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 35px !important;
+    max-width: 1500px !important;
+    margin: 15px auto !important;
+    padding: 0 40px !important;
+}
+
+/* 4. BLOQUES OPACOS: Hero y Pricing */
+.body-pcscan .hero, 
+.body-pcscan .pricing-card {
+    background-color: #1a1a1a !important;
+    border: 1px solid #333 !important;
+    padding: 40px !important;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.9) !important;
+    border-radius: 20px !important;
+}
+
+.body-pcscan .hero {
+    flex: 2.6 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 45px !important;
+}
+
+.body-pcscan .product-title {
+    font-family: 'Orbitron', sans-serif !important;
+    color: var(--color-accent) !important;
+    font-size: 3.4rem !important;
+    line-height: 1 !important;
+    -webkit-text-stroke: 0 !important;
+    text-shadow: 0 0 12px rgba(0, 188, 212, 1), 0 0 25px rgba(0, 188, 212, 0.4) !important;
+    margin-bottom: 25px !important;
+}
+
+.body-pcscan .hero-content p {
+    font-size: 1.25rem !important;
+    color: var(--color-text);
+    line-height: 1.5 !important;
+}
+
+.body-pcscan .hero-image img {
+    max-width: 440px !important;
+    height: auto !important;
+    border-radius: 20px !important;
+    transition: transform 0.3s ease !important;
+}
+
+.body-pcscan .hero-image img:hover {
+    transform: translateY(-12px) !important;
+}
+
+.body-pcscan .pricing-card {
+    flex: 1.1 !important;
+    border: 1px solid var(--color-accent) !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+}
+
+.body-pcscan .price-big {
+    font-size: 4.5rem !important;
+    font-weight: bold !important;
+    color: #fff !important;
+    margin-bottom: 15px !important;
+}
+
+/* 5. BOTONES: Centrado y Estilo Neón */
+.btn-buy, .btn-add-cart, .btn-ar {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 60px !important;
+    padding: 0 35px !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+    text-decoration: none !important;
+    border-radius: 50px !important;
+    line-height: 1 !important;
+    transition: 0.3s ease !important;
+    border: none !important;
+    cursor: pointer !important;
+}
+
+.btn-buy, .btn-add-cart {
+    background-color: var(--color-accent) !important;
+    color: #000 !important;
+}
+
+.btn-ar {
+    background-color: transparent !important;
+    color: var(--color-accent) !important;
+    border: 2px solid var(--color-accent) !important;
+}
+
+.btn-buy:hover, .btn-add-cart:hover, .btn-ar:hover {
+    box-shadow: 0 0 25px var(--color-accent) !important;
+    transform: translateY(-3px) !important;
+}
+
+/* 6. MODALES: Estilos Generales */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #1a1a1a;
+    border: 2px solid var(--color-accent);
+    padding: 40px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 480px;
+    text-align: center;
+    box-shadow: 0 0 50px rgba(0, 188, 212, 0.3);
+    position: relative;
+    animation: modalScale 0.3s ease;
+}
+
+@keyframes modalScale {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: var(--color-subtext);
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.neon-icon {
+    font-size: 3rem;
+    color: var(--color-accent);
+    text-shadow: 0 0 15px var(--color-accent);
+    margin-bottom: 20px;
+}
+
+/* 7. CARRITO: Contador e Items */
+.cart-icon a {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #ff4444;
+    color: white;
+    font-size: 11px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border: 1px solid #000;
+}
+
+#lista-carrito {
+    text-align: left;
+    margin: 20px 0;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.item-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #252525;
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    border: 1px solid #333;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.precio-item {
+    color: var(--color-accent) !important;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.btn-remove {
+    background: transparent;
+    border: none;
+    color: #ff4444;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.btn-remove:hover {
+    color: #ff8888;
+    transform: scale(1.2);
+}
+
+/* 8. FOOTER: Compacto y Limpio (CORREGIDO) */
+.body-pcscan footer {
+    margin-top: auto !important;
+    background-color: #000 !important; /* Negro puro para fundirse con el fondo */
+    padding: 15px 0 !important;        /* Padding reducido para menor altura */
+    border-top: none !important;       /* ELIMINA LA LÍNEA GRIS SUPERIOR */
+    width: 100% !important;
+}
+
+.body-pcscan footer p {
+    margin: 0 !important;              /* Elimina márgenes extra del texto */
+    font-size: 0.85rem !important;
+    color: var(--color-subtext) !important;
+}
+
+.body-pcscan footer a {
+    color: var(--color-accent) !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    transition: 0.3s ease !important;
+    margin-left: 5px;
+}
+
+.body-pcscan footer a:hover {
+    color: #fff !important;
+    text-shadow: 0 0 10px var(--color-accent) !important;
+}
