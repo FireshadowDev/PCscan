@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>PC BUILD</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<header>
+
+    <h1>PC BUILD</h1>
+
+    <nav class="nav-global">
+        <ul>
+            <li><a href="index.html" class="activo">Inicio</a></li>
+            <li><a href="configuradorpc.html">Configurador PC</a></li>
+            <li><a href="montajepc.html">Montaje PC</a></li>
+        </ul>
+    </nav>
+
+
+</header>
+
+<main class="inicio">
+
+    <nav class="nav-local">
+
+        <img src="images/localnav.png" alt="Menú lateral" class="nav-overlay">
+
+        <h3>Índice Inicio</h3>
+        <ul>
+            <li><a href="#intro">Intro</a></li>
+            <li><a href="#componentes">Componentes</a></li>
+            <li><a href="#glosario">Glosario</a></li>
+        </ul>
+    </nav>
+    <div class="inicio">
+        <section id="intro">
+
+            <h2>Inicio</h2>
+            <h3>¿Para qué sirve esta web?</h3>
+            <p>En esta web aprenderás todo lo necesario sobre ordenadores, desde sus piezas y funcionamiento, hasta la
+                compra correcta de sus componentes, compatibilidad, montaje y puesta a punto.</p>
+            <h3>¿Cómo surje esta web?</h3>
+            <p>Ante la necesidad de crear un ordenador, tuve muchas dudas sobre todo el proceso y tuve que realizar una
+                autoformación intensiva en la que consultando muchas fuentes diversas adquirí los conocimientos
+                necesarios para seleccionar los componentes perfectos y realizar el montaje de los mismos, obteniendo el
+                mejor ordenador para mis necesidades. Para ayudar a la gente a evitar el tedioso proceso de consultar
+                muchas fuentes distintas y resolver las dudas principales, sin ánimo de lucro ni patrocinio de
+                terceros.</p>
+        </section>
+
+        <section id="componentes">
+            <h2>¿Qué es un PC?
+            </h2>
+            <p>Un ordenador es una máquina electrónica capaz de procesar información siguiendo instrucciones.
+                Su función principal es recibir datos, procesarlos mediante componentes internos y producir
+                resultados útiles.
+                Está compuesto por hardware (las partes físicas) y software (los programas que lo hacen
+                funcionar).</p>
+        </section>
+        <section>
+            <h2>Componentes</h2>
+            <article>
+                <h4>Procesador (CPU)</h4>
+                <p>El procesador o Unidad Central de Procesamiento (CPU) es el cerebro del ordenador.
+                    Ejecuta las instrucciones de los programas y coordina las operaciones del sistema.
+                    Su velocidad se mide en gigahercios (GH<sub>z</sub>) y determina, junto con otros factores, el
+                    rendimiento
+                    general.</p>
+                <details>
+                    <summary>Más información sobre compatibilidad de CPU</summary>
+                    <p>Para instalar correctamente una CPU, debes verificar el socket de la placa base, la generación
+                        del procesador, y la compatibilidad con la RAM. Por ejemplo, un Ryzen 5 5600G requiere socket
+                        AM4 y soporte DDR<sub>4</sub>.</p>
+                </details>
+                <img src="images/cpu.jpg" alt="Procesador">
+
+            </article>
+            <article>
+                <h4>Tarjeta gráfica (GPU)</h4>
+                <p>La GPU se encarga del procesamiento de imágenes, vídeos y gráficos en juegos o programas de diseño.
+                    Puede estar integrada en la CPU o ser una tarjeta dedicada con su propia memoria y
+                    refrigeración.</p>
+                <img src="images/gpu.webp" alt="GPU">
+            </article>
+            <article>
+                <h4>Placa base</h4>
+                <p>Es el componente que conecta todas las partes del ordenador.
+                    A través de ella pasan los datos y la energía. Contiene el zócalo para la CPU, las ranuras para la
+                    memoria RAM y la gráfica, conectores de expansión, puertos SATA, y más.</p>
+                <img src="images/placa.png" alt="Placa base">
+            </article>
+            <article>
+                <h4>Memoria RAM</h4>
+                <p>La memoria de acceso aleatorio (RAM) almacena temporalmente los datos que el sistema necesita de
+                    forma inmediata.
+                    Cuanta más RAM tenga un equipo, más programas podrá ejecutar a la vez sin ralentizarse.
+                    Puede tener compatibilidad con DDR<sub>4</sub> y DDR<sub>5</sub>. Velocidades hasta 6000
+                    MHz<sup>+</sup>.
+                </p>
+                <img src="images/ram.jpg" alt="RAM">
+            </article>
+            <article>
+                <h4>Almacenamiento (SSD/HDD)</h4>
+                <p>Es donde se guardan los datos permanentemente.</p>
+                <ul>
+                    <li>HDD: discos duros tradicionales, más baratos pero más lentos.</li>
+                    <ul>
+                        <li>2.5" SATA</li>
+                        <li>3.5" SATA</li>
+                    </ul>
+                    <li>SSD: unidades de estado sólido, mucho más rápidas y silenciosas.</li>
+                    <ul>
+                        <li>SATA SSD</li>
+                        <li>M.2 NVMe</li>
+                    </ul>
+                </ul>
+                <img src="images/ssd.jpg" alt="SSD">
+            </article>
+            <article>
+                <h4>Fuente de alimentación</h4>
+                <p>Convierte la corriente alterna (AC) de la toma de corriente en corriente continua (DC) para alimentar
+                    los
+                    componentes del ordenador.
+                    Una buena fuente debe ofrecer potencia suficiente y eficiencia estable.</p>
+                <img src="images/psu.jpg" alt="PSU">
+            </article>
+            <article>
+                <h4>Refrigeración</h4>
+                <p>La refrigeración mantiene los componentes del ordenador a una temperatura segura para evitar
+                    sobrecalentamientos.
+                    Puede ser <strong>por aire</strong>, utilizando disipadores y ventiladores, o <strong>por
+                        líquido</strong>, mediante un circuito cerrado con bomba y radiador.
+                    Una buena refrigeración mejora el rendimiento y alarga la vida útil del equipo.</p>
+                <img src="images/refri.jpg" alt="Disipador">
+            </article>
+            <article>
+                <h4>Caja</h4>
+                <p>Contiene todos los componentes del ordenador y permite su correcta ventilación.
+                    Existen distintos tamaños (eATX, ATX, MicroATX, Mini-ITX) según el tipo de placa base.</p>
+                <img src="images/caja.webp" alt="Caja">
+            </article>
+        </section>
+    </div>
+
+    <aside id="glosario">
+        <h2>Glosario</h2>
+        <ul>
+            <li><strong>Overclock:</strong> Aumentar la frecuencia de la CPU o GPU para mejorar el rendimiento.</li>
+            <li><strong>Socket:</strong> Tipo de conexión entre el procesador y la placa base.</li>
+            <li><strong>RGB:</strong> Sistema de iluminación basado en los colores rojo, verde y azul.</li>
+            <li><strong>Latencia:</strong> Tiempo que tarda un componente (<em>como la RAM</em>) en responder a una
+                solicitud.
+            </li>
+            <li><strong>TDP:</strong> Cantidad máxima de calor que un componente puede disipar bajo carga.</li>
+            <li><strong>BIOS / UEFI:</strong> Software básico que inicia el ordenador antes del sistema operativo.
+            </li>
+            <li><strong>Benchmark:</strong> Prueba que mide el rendimiento de hardware.</li>
+            <li><strong>Pasta térmica:</strong> Material que mejora la transferencia de calor entre CPU y disipador.
+            </li>
+            <li><strong>Disipador:</strong> Pieza metálica que disipa el calor de un componente.</li>
+            <li><strong>RPM:</strong> Revoluciones por minuto de los ventiladores.</li>
+            <li><strong>Undervolt: </strong> Técnica que consiste en reducir el voltaje de operación de componentes
+                como
+                procesadores (<em>CPU</em>) o tarjetas gráficas (<em>GPU</em>) para disminuir su consumo energético, la
+                temperatura y
+                el
+                desgaste, sin que se pierda rendimiento.
+            </li>
+            <li><strong>Bottleneck (<em>cuello de botella</em>):</strong> cuando un componente limita el rendimiento de
+                otro.
+            </li>
+            <li><strong>Chipset:</strong> Controla la comunicación entre CPU, RAM y periféricos.
+                <ul>
+                    <li>CPU</li>
+                    <li>RAM</li>
+                    <li>Periféricos</li>
+                </ul>
+            </li>
+            <li><strong>PCI<sub>e</sub>:</strong> Interfaz de alta velocidad usada para conectar tarjetas gráficas y
+                otros
+                dispositivos.
+            </li>
+            <li><strong>SATA:</strong> Conexión estándar para discos duros y SSDs.</li>
+            <li><strong>M.2 / NVM<sub>e</sub>:</strong> Formatos modernos de conexión para SSDs ultrarrápidos.</li>
+            <li><strong>eATX / ATX / Micro-ATX / ITX:</strong> Formatos de tamaño de placa base y caja.</li>
+            <li><strong>Thermal Pad:</strong> Almohadilla térmica usada como alternativa a la pasta térmica.</li>
+            <li><strong>80 PLUS:</strong> Certificación de eficiencia energética para fuentes de alimentación.</li>
+            <li><strong>Modular:</strong> Fuente de alimentación con cables desmontables.</li>
+            <li><strong>Watt (<em>Vatio</em>):</strong> Unidad que mide la potencia eléctrica.</li>
+            <li><strong>Thermal Pad:</strong> Almohadilla térmica usada como alternativa a la pasta térmica.</li>
+            <li><strong>Fan Curve:</strong> Curva de velocidad personalizada de ventiladores según temperatura.</li>
+            <li><strong>Dual Channel:</strong> Configuración de RAM que duplica el ancho de banda al usar dos
+                módulos.
+            </li>
+            <li><strong>Intel XMP / AMD EXPO:</strong> Perfil automático para ajustar la frecuencia y voltaje de la
+                RAM.
+            </li>
+            <li><strong>VRM (<em>Voltage Regulator Module</em>):</strong> Regula el voltaje que llega a la CPU o GPU;
+                clave
+                para
+                estabilidad y overclock.
+            </li>
+            <li><strong>Chip gráfico integrado (<em>iGPU</em>):</strong> GPU integrada en el procesador, útil si no hay
+                tarjeta
+                dedicada.
+            </li>
+            <li><strong>Backplate:</strong> Placa trasera (<em>en GPU o CPU cooler</em>) que da soporte estructural y
+                mejora
+                la
+                refrigeración.
+            </li>
+            <li><strong>Fan Hub:</strong> Concentrador para conectar varios ventiladores a una sola entrada de la
+                placa
+                base.
+            </li>
+            <li><strong>CL (<em>CAS Latency</em>):</strong> Tiempo que tarda la RAM en responder a una instrucción.</li>
+            <li><strong>MHz (<em>Megahercios</em>):</strong> Velocidad de reloj de la memoria o del procesador.</li>
+            <li><strong>AIO (<em>All-In-One</em>):</strong> Sistema de refrigeración líquida preensamblado para CPU o
+                GPU.
+            </li>
+            <li><strong>Custom Loop:</strong> Sistema de refrigeración líquida montado a medida.</li>
+            <li><strong>Push/Pull:</strong> Configuración de ventiladores en la que unos empujan aire y otros lo
+                extraen
+                para optimizar el flujo.
+            </li>
+            <li><strong>CFM (<em>Cubic Feet per Minute</em>):</strong> Cantidad de aire que mueve un ventilador.</li>
+            <li><strong>Drivers:</strong> Controladores que permiten al sistema operativo comunicarse con el
+                hardware.
+            </li>
+            <li><strong>Firmware:</strong> Software básico que controla el hardware directamente.</li>
+            <li><strong>Flashear BIOS:</strong> Actualizar el firmware de la placa base.</li>
+            <li><strong>Núcleos (<em>Cores</em>):</strong> Unidades de procesamiento dentro del CPU.</li>
+            <li><strong>Hilos (<em>Threads</em>):</strong> Tareas que puede ejecutar un núcleo gracias a la
+                multihilación
+                (<em>Hyper-Threading/SMT</em>).
+            </li>
+            <li><strong>Cache L1/L2/L3:</strong> Memoria ultrarrápida dentro de la CPU.</li>
+            <li><strong>Airflow:</strong> Flujo de aire dentro del gabinete.</li>
+            <li><strong>FPS (<em>Frames per Second</em>):</strong> Imágenes por segundo que genera la GPU.</li>
+            <li><strong>Dust Filter:</strong> Filtros antipolvo para entradas y salidas de aire.</li>
+            <li><strong>Cable Tie / Brida:</strong> Herramienta para organizar cables.</li>
+        </ul>
+
+    </aside>
+</main>
+
+<footer>
+    <p>&copy; Copyright 2025 - PC BUILD</p>
+</footer>
+
+</body>
+</html>
