@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bbd0479b368e3a47a849fcced56493d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BotonCompra
-  urlCompra: https://vxe.com/products/vxe-dragonfly-r1-series-wireless-mouse?variant=47700096909526
+  urlCompra: https://fireshadowdev.github.io/PCscan/Web/
 --- !u!1001 &4683046826197280118
 PrefabInstance:
   m_ObjectHideFlags: 0
