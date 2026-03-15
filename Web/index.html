@@ -47,17 +47,39 @@
 </main>
 
 <footer>
-    <footer>
     <p>&copy; 2026 - PC BUILD | 
         <a href="../App/pcscan.apk" download="pcscan.apk" class="btn-download-app">
             <i class="fab fa-android"></i> Descargar App
         </a>
     </p>
+    <div class="footer-legal">
+        <a href="#" class="link-legal">Aviso Legal</a> | 
+        <a href="#" class="link-legal">Política de Privacidad</a> | 
+        <a href="#" class="link-legal">Cookies</a> | 
+        <a href="#" class="link-legal">Devoluciones</a>
+    </div>
 </footer>
+
+<div id="modal-compra" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-header">
+            <i class="fas fa-shopping-cart neon-icon"></i>
+            <h2 id="modal-titulo">Procesando Pedido</h2>
+        </div>
+        <div class="modal-body">
+            <p id="seleccion-producto">Has seleccionado: <strong>ATK VXE R1 PRO</strong></p>
+            <p class="modal-price">Total: 59,99€</p>
+            <div class="loader"></div>
+            <p class="status-text">Conectando con la pasarela segura...</p>
+        </div>
+        <button class="btn-confirm" onclick="cerrarModal()">Entendido</button>
+    </div>
+</div>
 
 <div id="modal-carrito" class="modal">
     <div class="modal-content">
-        <span class="close-modal-carrito close-modal">&times;</span>
+        <span class="close-modal">&times;</span>
         <div class="modal-header">
             <i class="fas fa-shopping-basket neon-icon"></i>
             <h2>Tu Carrito</h2>
@@ -69,23 +91,6 @@
             <button class="btn-ar" onclick="cerrarCarrito()">Seguir Comprando</button>
             <button id="btn-ir-a-comprar" class="btn-buy" style="display:none;">Finalizar Compra</button>
         </div>
-    </div>
-</div>
-
-<div id="modal-compra" class="modal">
-    <div class="modal-content">
-        <span class="close-modal">&times;</span>
-        <div class="modal-header">
-            <i class="fas fa-shopping-cart neon-icon"></i>
-            <h2>Procesando Pedido</h2>
-        </div>
-        <div class="modal-body">
-            <p>Has seleccionado: <strong>ATK VXE R1 PRO</strong></p>
-            <p class="modal-price">Total: 59,99€</p>
-            <div class="loader"></div>
-            <p class="status-text">Conectando con la pasarela segura...</p>
-        </div>
-        <button class="btn-confirm" onclick="cerrarModal()">Entendido</button>
     </div>
 </div>
 
