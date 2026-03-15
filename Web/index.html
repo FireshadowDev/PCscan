@@ -11,28 +11,54 @@
 <body class="body-pcscan">
 
 <header>
-    <div class="header-container">
-        <div class="logo-pcscan">PC<span>SCAN</span></div> 
-        <nav class="nav-global">
-            <ul>
-                <li><a href="#producto" class="activo">Producto</a></li>
-                <li><a href="pcbuild.html">Guía Componentes</a></li>
-                <li class="cart-icon"><a href="#"><i class="fas fa-shopping-cart"></i><span id="cart-count">0</span></a></li>
-            </ul>
-        </nav>
+    <div class="logo-pcscan">PC<span>SCAN</span></div>
+    
+    <div class="cart-icon">
+        <a href="#"><i class="fas fa-shopping-cart"></i><span id="cart-count">0</span></a>
     </div>
+
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <nav class="nav-global">
+        <ul>
+            <li><a href="#producto" class="activo">Producto</a></li>
+            <li><a href="pcbuild.html">Guía Componentes</a></li>
+            <li><a href="#" class="link-legal">Soporte</a></li>
+        </ul>
+    </nav>
 </header>
 
 <main>
     <section id="producto" class="hero">
         <div class="hero-content">
-            <h2 class="product-title">ATK VXE<br>R1 PRO</h2>
-            <p>El ratón gaming inalámbrico ultraligero (48g) de alto rendimiento que has visualizado en Realidad Aumentada.</p>
+            <h1 class="product-title">ATK VXE<br>R1 PRO</h1>
+            
+            <p class="hero-copy">Domina cada partida con la precisión absoluta del sensor PAW3395. Con solo 48 gramos de peso, este ratón inalámbrico ultraligero se convierte en una extensión de tu mano. Si vienes de nuestra App, ya sabes cómo queda en tu setup; si no, escanea tu espacio ahora mismo.</p>
+            
             <div class="hero-btns">
                 <a href="#precio" class="btn-buy">Comprar Ahora</a>
-                <a href="../Project/Assets/Textures/marcador.pdf" target="_blank" class="btn-ar">Descargar Marcador</a>
+                <a href="./Marcador/marcadorRaton.png" download="marcador_pcscan.png" class="btn-ar">
+                    <i class="fas fa-cube" style="margin-right: 8px;"></i> Ver en mi espacio<br><span style="font-size: 0.6em; margin-top: 3px;">(Descargar Marcador)</span>
+                </a>
+            </div>
+
+            <div class="product-specs">
+                <h4><i class="fas fa-microchip"></i> Especificaciones Técnicas</h4>
+                <ul>
+                    <li><strong>Sensor:</strong> PAW3395 (Precisión 26,000 DPI)</li>
+                    <li><strong>Estructura:</strong> Carcasa ultraligera (48g)</li>
+                    <li><strong>Materiales:</strong> Plástico ABS reciclado de alta densidad</li>
+                    <li><strong>Acabado:</strong> Recubrimiento mate antideslizante</li>
+                    <li><strong>Certificación:</strong> RoHS - Embalaje 100% Eco-friendly</li>
+                </ul>
             </div>
         </div>
+        
         <div class="hero-image">
             <img src="images/raton.webp" alt="ATK VXE R1 Pro" onerror="this.src='images/entrada.webp'">
         </div>
@@ -41,24 +67,80 @@
     <section id="precio" class="pricing-card">
         <h3>Precio Final</h3>
         <div class="price-big">59,99€</div>
-        <p>Base imponible: 49,58€ | <strong>IVA (21%): 10,41€</strong></p>
-        <button class="btn-add-cart">Añadir al Carrito</button>
+        
+        <div class="vat-breakdown" style="font-size: 0.85rem; color: var(--color-subtext); margin-bottom: 20px; padding: 10px; background: rgba(0,0,0,0.5); border-radius: 8px;">
+            <p style="margin: 0; padding-bottom: 5px; border-bottom: 1px solid #333;">Base imponible: <strong>49,58€</strong></p>
+            <p style="margin: 0; padding-top: 5px; color: var(--color-accent);">IVA (21%): <strong>10,41€</strong></p>
+        </div>
+        
+        <button class="btn-add-cart"><i class="fas fa-cart-plus" style="margin-right: 8px;"></i> Añadir al Carrito</button>
     </section>
 </main>
 
-<footer>
-    <p>&copy; 2026 - PC BUILD | 
-        <a href="../App/pcscan.apk" download="pcscan.apk" class="btn-download-app">
-            <i class="fab fa-android"></i> Descargar App
-        </a>
-    </p>
-    <div class="footer-legal">
-        <a href="#" class="link-legal">Aviso Legal</a> | 
-        <a href="#" class="link-legal">Política de Privacidad</a> | 
-        <a href="#" class="link-legal">Cookies</a> | 
-        <a href="#" class="link-legal">Devoluciones</a>
-    </div>
-</footer>
+<section class="social-proof">
+        <div class="trust-badges">
+            <div class="badge"><i class="fas fa-truck-fast"></i> Envío 24h</div>
+            <div class="badge"><i class="fas fa-shield-alt"></i> 3 Años Garantía</div>
+            <div class="badge"><i class="fas fa-lock"></i> Pago Seguro</div>
+        </div>
+        
+        <h3 class="section-title">Valoraciones Destacadas</h3>
+        <div class="testimonials-container">
+            <article class="testimonial-card">
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p>"La app de Realidad Aumentada me convenció. Vi exactamente cómo quedaba en mi escritorio antes de comprarlo. El ratón vuela y los clics son súper nítidos."</p>
+                <span class="author">- Álex G. (Compra Verificada)</span>
+            </article>
+            
+            <article class="testimonial-card">
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                </div>
+                <p>"Pesa poquísimo y el sensor es una locura. Hace el combo perfecto junto a mi nuevo PC. ¡Recomendadísimo para setups exigentes!"</p>
+                <span class="author">- Gemma M. (Compra Verificada)</span>
+            </article>
+        </div>
+    </section>
+
+<footer class="footer-pcscan">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4><i class="fas fa-headset"></i> Contacto</h4>
+                <p><i class="fas fa-envelope"></i> soporte@pcscan.com</p>
+                <p><i class="fas fa-phone"></i> +34 900 123 456</p>
+                <p><i class="fas fa-map-marker-alt"></i> Sede Central PCscan</p>
+            </div>
+
+            <div class="footer-col">
+                <h4><i class="fas fa-balance-scale"></i> Legal</h4>
+                <div class="footer-legal-links">
+                    <a href="#" class="link-legal">Aviso Legal</a>
+                    <a href="#" class="link-legal">Política de Privacidad</a>
+                    <a href="#" class="link-legal">Política de Cookies</a>
+                    <a href="#" class="link-legal">Devoluciones y Garantías</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4><i class="fas fa-globe"></i> Comunidad</h4>
+                <div class="social-icons">
+                    <a href="#" title="Twitter / X"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" title="Discord"><i class="fab fa-discord"></i></a>
+                    <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+                <a href="./App/pcscan.apk" download="pcscan.apk" class="btn-download-app">
+                    <i class="fab fa-android"></i> Descargar App
+                </a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 PCscan. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 
 <div id="modal-compra" class="modal">
     <div class="modal-content">

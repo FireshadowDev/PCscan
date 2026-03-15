@@ -1,5 +1,9 @@
+/* ============================================================
+   LÓGICA DE INTERACCIÓN PCSCAN: VERSIÓN MAESTRA FINAL
+   ============================================================ */
+
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Referencias principales del DOM
+    // Referencias principales del DOM
     const modalCompra = document.getElementById('modal-compra');
     const modalCarrito = document.getElementById('modal-carrito');
     const modalIcon = modalCompra.querySelector('.neon-icon');
@@ -12,8 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const listaCarritoDiv = document.getElementById('lista-carrito');
     const btnIrAComprar = document.getElementById('btn-ir-a-comprar');
     const btnDownloadApp = document.querySelector('.btn-download-app');
+    const btnDownloadMarcador = document.querySelector('.btn-ar');
 
-    let carrito = []; // Memoria del carrito
+    let carrito = []; 
 
     // --- FUNCIÓN: ACTUALIZAR VISTA DEL CARRITO ---
     const actualizarVistaCarrito = () => {
@@ -68,32 +73,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- ACCIÓN: COMPRAR AHORA (Botón Hero - Compra Directa) ---
+    // --- ACCIÓN: COMPRAR AHORA (Botón Hero) ---
     const btnBuyHero = document.querySelector('.btn-buy');
     if (btnBuyHero) {
         btnBuyHero.addEventListener('click', (e) => {
             e.preventDefault();
             const totalCart = carrito.reduce((acc, item) => acc + (item.precio * item.cantidad), 0);
-            
-            // Si el carrito está vacío, compramos 1 unidad por defecto (59.99€)
-            // Si hay algo, compramos el total del carrito
             const montoAComprar = totalCart > 0 ? totalCart : 59.99;
-            
             abrirSimulacionCompra(montoAComprar);
         });
     }
 
-    // --- ACCIÓN: FINALIZAR COMPRA (Desde el Carrito - Requiere items) ---
+    // --- ACCIÓN: FINALIZAR COMPRA (Desde el Carrito) ---
     btnIrAComprar.addEventListener('click', () => {
         const total = carrito.reduce((acc, item) => acc + (item.precio * item.cantidad), 0);
-        // Aquí se mantiene la validación de que debe haber algo
         if (total > 0) {
             modalCarrito.style.display = 'none';
             abrirSimulacionCompra(total);
         }
     });
 
-    // --- FUNCIÓN: SIMULACIÓN DE COMPRA ---
     function abrirSimulacionCompra(precioTotal) {
         modalIcon.className = 'fas fa-shopping-cart neon-icon';
         if (selectionRow) selectionRow.style.display = "block";
@@ -107,12 +106,26 @@ document.addEventListener('DOMContentLoaded', () => {
             modalTitle.innerText = "¡Compra Realizada!";
             modalStatus.innerText = `Tu pedido de ${precioTotal.toFixed(2)}€ ha sido procesado con éxito.`;
             loader.style.display = "none";
-            carrito = []; // Vaciar tras comprar
+            carrito = []; 
             actualizarVistaCarrito();
         }, 3000);
     }
 
-    // --- LÓGICA LEGAL Y DESCARGA ---
+    // --- ACCIÓN: DESCARGAR MARCADOR ---
+    if (btnDownloadMarcador) {
+        btnDownloadMarcador.addEventListener('click', () => {
+            modalIcon.className = 'fas fa-image neon-icon';
+            if (selectionRow) selectionRow.style.display = "none";
+            modalTitle.innerText = "Descargando Marcador";
+            modalStatus.innerText = "El marcador de Realidad Aumentada se está guardando...";
+            modalPrice.innerText = "Archivo: marcadorRaton.png";
+            loader.style.display = "block";
+            modalCompra.style.display = 'flex';
+            setTimeout(() => { loader.style.display = "none"; }, 2000);
+        });
+    }
+
+    // --- LÓGICA LEGAL ---
     const linksLegales = document.querySelectorAll('.link-legal');
     linksLegales.forEach(link => {
         link.addEventListener('click', (e) => {
@@ -127,9 +140,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // --- DESCARGA APP ---
     if (btnDownloadApp) {
         btnDownloadApp.addEventListener('click', (e) => {
-            e.preventDefault();
             modalIcon.className = 'fas fa-file-download neon-icon';
             if (selectionRow) selectionRow.style.display = "none";
             modalTitle.innerText = "Iniciando Descarga";
